@@ -1,0 +1,14 @@
+const assert = require('assert');
+
+describe('Sample:', function() {
+    it('WDIO test', async function(){
+        await browser.url('https://staging.codetrain.xyz/register');
+
+        const title = await browser.getTitle();
+
+        assert.strictEqual(
+            title, 
+            'CodeTrainer'
+        );
+    });
+});
